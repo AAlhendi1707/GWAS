@@ -5,10 +5,6 @@
 Now that we have performed SNP and sample level quality control on our genotype data, we will calculate principal components to be included as covariates in the GWA models. These serve to adjust for any remaining substructure that may confound SNP level association. As with Ancestry filtering we will calculate PCs using the `snpgdsPCA` function from SNPRelate, after performing LD pruning once again on the filtered genotype data set. In this example, we will include the first 10 principal components in GWA models.
 
 ```r
-## load R data from steps 1-4
-load("save.image("GWAS.Steps1-4.Rdata")
-```
-```r
 #Set LD threshold to 0.2
 ld.thresh <- 0.2
 
