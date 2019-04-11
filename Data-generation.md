@@ -223,5 +223,7 @@ rm(missing)
 rm(present)
 
 # Add new imputed, target and rules data to saved results
-save.image("GWAS.Steps1-6.Rdata")
+save(genotype, genoBim, clinical, pcs, imputed, target, rules, support, file=working.data.fname(6))
+
 ```
+
