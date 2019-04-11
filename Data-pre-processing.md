@@ -4,7 +4,7 @@ For this tutorial we use genotype data files formatted for use with [PLINK](http
 
 Alternatively, similar genotype information can also be formatted for PLINK software as .ped and .map files. The information of the .ped file can be thought of as a combination of the .bed and .fam files. It is a large table with the first six columns identical to a .fam file, followed by a columns containing the genotype data for each SNP. The .map file contains the first four columns of the .bim file, without the allele assignments. These files can be read in using the function, `read.pedfile`, from snpStats. More information about the formatting of these files can be found on the PLINK website.
 
-## ---- step1 ---
+## Read in PLINK files - step1
 ```r
 library(snpStats)
 
@@ -178,7 +178,7 @@ cat(nrow(genotype)-sum(sampleuse),
 genotype <- genotype[sampleuse,]
 clinical<- clinical[ rownames(genotype), ]
 ```
-## IBD analysis
+### IBD analysis
 In addition to these summary statistics, we also want to filter on relatedness criteria. We use the SNPRelate package to perform identity-by-descent (IBD) analysis. This package requires that the data be transformed into a GDS format file. IBD analysis is performed on only a subset of SNPs that are in linkage equilibrium by iteratively removing adjacent SNPs that exceed an LD threshold in a sliding window using the `snpgdsLDpruning` function.
 
 ```r
@@ -345,7 +345,7 @@ print(genotype)                         # Tutorial: expect all 1401 subjects rem
 ## Col names:  rs12565286 ... rs5970564
 ```
 
-## Ancestry
+### Ancestry
 To better understand ancestry, we plot the first two principal components of the genotype data. Principal component calculation is achieved via the `snpgdsPCA` function from SNPRelate. It is important to note that in this example we are reasonably confident that our samples are homogeneous, coming from european ancestry. Therefore, given that there are no clear outliers, we fail to remove any samples.
 
 ```r
@@ -391,7 +391,7 @@ closefn.gds(genofile)
 save(genotype, genoBim, clinical, file=working.data.fname(3))
 ```
 
-## SNP Filtering - HWE filtering on control samples
+### SNP Filtering - HWE filtering on control samples
 Finally, once samples are filtered, we return to SNP level filtering and apply a check of Hardy-Weinberg equilibrium. Rejection of Hardy-Weinberg equilibrium can be an indication of population substructure or genotyping errors. Given that we are performing a statistical test at every SNP, it is common to use a relatively lenient cut-off. In this example we only remove SNPs with p-values, corresponding to the HWE test statistic on CAD controls, of less than 1×10−6. We only test HWE on CAD controls due to possible violation of HWE caused by disease association.
 
 ```r
