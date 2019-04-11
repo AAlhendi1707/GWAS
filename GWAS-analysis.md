@@ -172,5 +172,6 @@ impCETPgeno <- imputed[, impCETP$SNP ]
 
 ```r
 ## Save GWAS analysis restuls
-save.image("GWAS.Steps1-8.Rdata")
+save(genotype, genoBim, clinical, pcs, imputed, target, rules,
+     phenoSub, support, genes, impCETP, impCETPgeno, imputeOut, file = working.data.fname(8))
 ```
