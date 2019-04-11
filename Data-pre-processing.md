@@ -391,7 +391,7 @@ closefn.gds(genofile)
 save(genotype, genoBim, clinical, file=working.data.fname(3))
 ```
 
-### SNP Filtering - HWE filtering on control samples
+### SNP Filtering - HWE filtering on control samples - Step 4
 Finally, once samples are filtered, we return to SNP level filtering and apply a check of Hardy-Weinberg equilibrium. Rejection of Hardy-Weinberg equilibrium can be an indication of population substructure or genotyping errors. Given that we are performing a statistical test at every SNP, it is common to use a relatively lenient cut-off. In this example we only remove SNPs with p-values, corresponding to the HWE test statistic on CAD controls, of less than 1×10−6. We only test HWE on CAD controls due to possible violation of HWE caused by disease association.
 
 ```r
