@@ -11,6 +11,6 @@ Genome-wide Association Study Tutorial
 - [Post-analytic visualization and-genomic interrogation - steps 9-10](https://github.com/AAlhendi1707/GWAS/blob/master/Post-analytic-visualization-and-genomic-interrogation.md)
 
 
-Materials from  Reed et al. (2015)
+Materials from  Reed et al. (2015). <https://doi.org/10.1002/sim.6605>
 
 <img src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5019244/bin/SIM-34-3769-g001.jpg" >
