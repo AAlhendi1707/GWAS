@@ -423,4 +423,4 @@ print(genotype)                           # 656890 SNPs remain
 ```
 ```r
 # Save genotype and SNVs filtered data to use in later analyses
-save.image("GWAS.Steps1-4.Rdata")
+save(genotype, genoBim, clinical, file=working.data.fname(4))
