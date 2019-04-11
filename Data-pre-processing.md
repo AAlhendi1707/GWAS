@@ -4,7 +4,7 @@ For this tutorial we use genotype data files formatted for use with [PLINK](http
 
 Alternatively, similar genotype information can also be formatted for PLINK software as .ped and .map files. The information of the .ped file can be thought of as a combination of the .bed and .fam files. It is a large table with the first six columns identical to a .fam file, followed by a columns containing the genotype data for each SNP. The .map file contains the first four columns of the .bim file, without the allele assignments. These files can be read in using the function, `read.pedfile`, from snpStats. More information about the formatting of these files can be found on the PLINK website.
 
-## Read in PLINK files - step1
+## Read in PLINK files - Step1
 ```r
 library(snpStats)
 
