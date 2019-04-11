@@ -395,7 +395,7 @@ pctab <- data.frame(sample.id = pca$sample.id,
 plot(pctab$PC2, pctab$PC1, xlab="Principal Component 2", ylab="Principal Component 1", 
 main = "Ancestry Plot")
 ```
-<img src="imgs/PCA-plot.png">
+<img src="imgs/PCA-plot.png" width=50% height=50% >
 
 ```r
 # Close GDS file
