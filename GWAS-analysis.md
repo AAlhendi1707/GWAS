@@ -79,6 +79,8 @@ Using this phenotype data, we perform model fitting on each of the typed SNPs in
 # Note: This function writes a file, but does not produce an R object
 start <- Sys.time()
 GWAA(genodata=genotype, phenodata=phenoSub, filename=gwaa.fname)
+end <- Sys.time()
+print(end-start)
 ```
 ```
 ## Loading required package: doParallel
@@ -100,11 +102,6 @@ GWAA(genodata=genotype, phenodata=phenoSub, filename=gwaa.fname)
 ## GWAS SNPs 525513-591201 (90% finished)
 ## GWAS SNPs 591202-656890 (100% finished)
 ## [1] "Done."
-```
-```r
-end <- Sys.time()
-print(end-start)
-GWAA(genodata=genotype, phenodata=phenoSub, filename=gwaa.fname)
 ```
 ```
 ## Time difference of 2.259378 hours
