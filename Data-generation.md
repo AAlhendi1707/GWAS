@@ -7,8 +7,9 @@ Now that we have performed SNP and sample level quality control on our genotype 
 ```r
 ## load R data from steps 1-4
 load("save.image("Genotype.SNVsfiltered.Rdata")
-
-# Set LD threshold to 0.2
+```
+```r
+#Set LD threshold to 0.2
 ld.thresh <- 0.2
 
 set.seed(1000)
@@ -16,7 +17,6 @@ geno.sample.ids <- rownames(genotype)
 snpSUB <- snpgdsLDpruning(genofile, ld.threshold = ld.thresh,
                           sample.id = geno.sample.ids, # Only analyze the filtered samples
                           snp.id = colnames(genotype)) # Only analyze the filtered SNPs
-                          
 ```
 ```
 ## SNP pruning based on LD:
