@@ -10,7 +10,7 @@ First we create a data frame of phenotype features that is the concatenation of 
 
 ```r
 ## restore the data generated from steps 1-6
-load ("Genotype.SNVsfiltered.imputed.target.rultes.Rdata")
+load ("GWAS.Steps1-6.Rdata")
 
 ## Require GenABEL and GWAA function
 library(GenABEL)
@@ -172,5 +172,5 @@ impCETPgeno <- imputed[, impCETP$SNP ]
 
 ```r
 ## Save GWAS analysis restuls
-save.image("GWAS.steps1-8.Rdata")
+save.image("GWAS.Steps1-8.Rdata")
 ```
