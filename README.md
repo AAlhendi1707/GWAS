@@ -1,7 +1,8 @@
 # GWAS
 Genome-wide Association Study Tutorial
 
-Contents:
+
+### Contents:
 
 - [Introduction](https://github.com/AAlhendi1707/GWAS/blob/master/Introduction.md)
 - [Data pre-processing - steps 1-4](https://github.com/AAlhendi1707/GWAS/blob/master/Data-pre-processing.md)
