@@ -53,16 +53,17 @@ cat(length(snpset.pca),"\n")  #72578 SNPs will be used in PCA analysis
 pca <- snpgdsPCA(genofile, sample.id = geno.sample.ids,  snp.id = snpset.pca, num.thread=1)
 ```
 ```
-## Principal Component Analysis (PCA) on SNP genotypes:
-## Excluding 788895 SNPs on non-autosomes
-## Excluding 0 SNP (monomorphic: TRUE, < MAF: NaN, or > missing rate: NaN)
-## Working space: 1401 samples, 72578 SNPs
-##  Using 1 (CPU) core
-## PCA: the sum of all working genotypes (0, 1 and 2) = 32714193
-## PCA: Wed Jun 24 17:02:49 2015    0%
-## PCA: Wed Jun 24 17:34:40 2015    100%
-## PCA: Wed Jun 24 17:34:40 2015    Begin (eigenvalues and eigenvectors)
-## PCA: Wed Jun 24 17:34:41 2015    End (eigenvalues and eigenvectors)
+Principal Component Analysis (PCA) on genotypes:
+Excluding 788,895 SNPs (non-autosomes or non-selection)
+Excluding 0 SNP (monomorphic: TRUE, MAF: NaN, missing rate: NaN)
+Working space: 1,401 samples, 72,578 SNPs
+    using 1 (CPU) core
+PCA:    the sum of all selected genotypes (0,1,2) = 32714193
+CPU capabilities: Double-Precision SSE2
+Thu Apr 11 20:22:03 2019    (internal increment: 3248)
+[==================================================] 100%, completed in 37s
+Thu Apr 11 20:22:40 2019    Begin (eigenvalues and eigenvectors)
+Thu Apr 11 20:22:41 2019    Done.
 ```
 ```r
 # Find and record first 10 principal components
