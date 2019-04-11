@@ -6,7 +6,7 @@ Now that we have performed SNP and sample level quality control on our genotype 
 
 ```r
 ## load R data from steps 1-4
-load("save.image("Genotype.SNVsfiltered.Rdata")
+load("save.image("GWAS.Steps1-4.Rdata")
 ```
 ```r
 #Set LD threshold to 0.2
@@ -223,5 +223,5 @@ rm(missing)
 rm(present)
 
 # Add new imputed, target and rules data to saved results
-save.image("Genotype.SNVsfiltered.imputed.target.rultes.Rdata")
+save.image("GWAS.Steps1-6.Rdata".Rdata")
 ```
