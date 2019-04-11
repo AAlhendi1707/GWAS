@@ -423,4 +423,4 @@ print(genotype)                           # 656890 SNPs remain
 ```
 ```r
 # Save genotype and SNVs filtered data to use in later analyses
-save.image("Genotype.SNVsfiltered.Rdata")
+save.image("GWAS.Steps1-4.Rdata")
