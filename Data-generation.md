@@ -181,7 +181,8 @@ rules <- snp.imputation(present, missing, pos.pres, pos.miss)
 ```r
 # Remove failed imputations
 rules <- rules[can.impute(rules)]
-cat("Imputation rules for", length(rules), "SNPs were estimated\n")  # Imputation rules for 197888 SNPs were estimated
+cat("Imputation rules for", length(rules), "SNPs were estimated\n")  
+# Imputation rules for 197888 SNPs were estimated
 ```
 ```
 ## Imputation rules for 197888 SNPs were estimated
