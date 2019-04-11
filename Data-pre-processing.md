@@ -126,6 +126,11 @@ print(genotype)                           # 658186 SNPs remain
 ## Row names:  10002 ... 11596 
 ## Col names:  rs12565286 ... rs5970564
 ```
+```r
+# Write subsetted genotype data and derived results for future use
+save(genotype, snpsum.col, genoBim, clinical, file=working.data.fname(2))
+```
+
 ## Sample level filtering - Step 3
 The second stage of data pre-processing involves filtering samples, i.e. removing individuals due to missing data, sample contamination, correlation (for population-based investigations), and racial/ethnic or gender ambiguity or discordance. In our study, we address these issues by filtering on call rate, heterozygosity, cryptic relatedness and duplicates using identity-by-descent, and we visually assess ancestry.
 
@@ -133,7 +138,14 @@ The second stage of data pre-processing involves filtering samples, i.e. removin
 Sample level quality control for missing data and heterozygosity is achieved using the row.summary function from snpStats. An additional heterozygosity F statistic calculation is carried out with the form, |F|=(1−O/E), where O is observed proportion of heterozygous genotypes for a given sample and E is the expected proportion of heterozygous genotypes for a given sample based on the minor allele frequency across all non-missing SNPs for a given sample.
 
 ```r
-library(SNPRelate)                      # LD pruning, relatedness, PCA
+# Sample level filtering
+source("globals.R")
+
+# load data created in previous snippets
+load(working.data.fname(2))
+
+library(snpStats)
+library(SNPRelate)               # LD pruning, relatedness, PCA
 library(plyr)
 
 # Create sample statistics (Call rate, Heterozygosity)
