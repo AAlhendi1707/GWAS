@@ -10,7 +10,10 @@ First we create a data frame of phenotype features that is the concatenation of 
 
 ```r
 ## restore the data generated from steps 1-6
-load ("GWAS.Steps1-6.Rdata")
+source("globals.R")
+
+# load data created in previous snippets
+load(working.data.fname(6))
 
 ## Require GenABEL and GWAA function
 library(GenABEL)
