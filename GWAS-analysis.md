@@ -108,7 +108,7 @@ GWAA(genodata=genotype, phenodata=phenoSub, filename=gwaa.fname)
 ```
 ```r
 # Add phenosub to saved results
-save.image("Genotype.SNVsfiltered.imputed.target.rultes.Phenosub.Rdata")
+save(genotype, genoBim, clinical, pcs, imputed, target, rules, phenoSub, support, file=working.data.fname(7))
 ```
 
 ## Association analysis of imputed SNPs - Step 8
