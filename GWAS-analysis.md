@@ -169,5 +169,8 @@ impCETP <- map2gene("CETP", coords = genes, SNPs = imputeOut)
 # Filter only the imputed CETP SNP genotypes 
 impCETPgeno <- imputed[, impCETP$SNP ]
 ```
-save.image("GWAS.steps1-8.Rdata")
 
+```r
+## Save GWAS analysis restuls
+save.image("GWAS.steps1-8.Rdata")
+```
