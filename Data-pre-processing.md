@@ -292,14 +292,15 @@ ibd <- snpgdsIBDMoM(genofile, kinship=TRUE,
 ## Hint: it is suggested to call `snpgdsOpen' to open a SNP GDS file instead of `openfn.gds'.
 ```
 ```
-## IBD analysis (PLINK method of moment) on SNP genotypes:
-## Excluding 788661 SNPs on non-autosomes
-## Excluding 0 SNP (monomorphic: TRUE, < MAF: NaN, or > missing rate: NaN)
-## Working space: 1401 samples, 72812 SNPs
-##  Using 1 (CPU) core
-## PLINK IBD:   the sum of all working genotypes (0, 1 and 2) = 32757268
-## PLINK IBD:   Wed Jun 24 16:51:53 2015    0%
-## PLINK IBD:   Wed Jun 24 16:52:21 2015    100%
+IBD analysis (PLINK method of moment) on genotypes:
+Excluding 788,661 SNPs (non-autosomes or non-selection)
+Excluding 0 SNP (monomorphic: TRUE, MAF: NaN, missing rate: NaN)
+Working space: 1,401 samples, 72,812 SNPs
+    using 1 (CPU) core
+PLINK IBD:    the sum of all selected genotypes (0,1,2) = 32757268
+Thu Apr 11 20:01:28 2019    (internal increment: 65536)
+[==================================================] 100%, completed in 13s
+Thu Apr 11 20:01:41 2019    Done.
 ```
 ```r
 ibdcoeff <- snpgdsIBDSelection(ibd)     # Pairwise sample comparison
