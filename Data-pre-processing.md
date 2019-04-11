@@ -203,22 +203,22 @@ kin.thresh <- 0.1   # Kinship cut-off
 snpgdsBED2GDS(gwas.fn$bed, gwas.fn$fam, gwas.fn$bim, gwas.fn$gds)
 ```
 ```
-## Start snpgdsBED2GDS ...
-##  BED file: "/Users/ericreed/Desktop/FoulkesLab/SIMFiles/GWAStutorial.bed" in the SNP-major mode (Sample X SNP)
-##  FAM file: "/Users/ericreed/Desktop/FoulkesLab/SIMFiles/GWAStutorial.fam", DONE.
-##  BIM file: "/Users/ericreed/Desktop/FoulkesLab/SIMFiles/GWAStutorial.bim", DONE.
-## Wed Jun 24 16:51:03 2015     store sample id, snp id, position, and chromosome.
-##  start writing: 1401 samples, 861473 SNPs ...
-##      Wed Jun 24 16:51:03 2015    0%
-##      Wed Jun 24 16:51:15 2015    100%
-## Wed Jun 24 16:51:15 2015     Done.
-## Optimize the access efficiency ...
-## Clean up the fragments of GDS file:
-##  open the file "/Users/ericreed/Desktop/FoulkesLab/SIMFiles/GWAStutorial.gds" (size: 308167905).
-##  # of fragments in total: 39.
-##  save it to "/Users/ericreed/Desktop/FoulkesLab/SIMFiles/GWAStutorial.gds.tmp".
-##  rename "/Users/ericreed/Desktop/FoulkesLab/SIMFiles/GWAStutorial.gds.tmp" (size: 308167653).
-##  # of fragments in total: 18.
+Start snpgdsBED2GDS ...
+	BED file: "/scratch/spectre/a/asna4/GWAS/GWAStutorial.bed" in the SNP-major mode (Sample X SNP)
+	FAM file: "/scratch/spectre/a/asna4/GWAS/GWAStutorial.fam", DONE.
+	BIM file: "/scratch/spectre/a/asna4/GWAS/GWAStutorial.bim", DONE.
+Thu Apr 11 19:57:17 2019 	store sample id, snp id, position, and chromosome.
+	start writing: 1401 samples, 861473 SNPs ...
+ 	Thu Apr 11 19:57:17 2019	0%
+ 	Thu Apr 11 19:57:29 2019	100%
+Thu Apr 11 19:57:29 2019 	Done.
+Optimize the access efficiency ...
+Clean up the fragments of GDS file:
+    open the file '/scratch/spectre/a/asna4/GWAS/GWAStutorial.gds' (292.4M)
+    # of fragments: 39
+    save to '/scratch/spectre/a/asna4/GWAS/GWAStutorial.gds.tmp'
+    rename '/scratch/spectre/a/asna4/GWAS/GWAStutorial.gds.tmp' (292.4M, reduced: 252B)
+    # of fragments: 18
 ```
 ```r
 genofile <- openfn.gds(gwas.fn$gds, readonly = FALSE)
