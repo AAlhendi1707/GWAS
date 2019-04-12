@@ -139,7 +139,7 @@ Sample level quality control for missing data and heterozygosity is achieved usi
 
 ```r
 # Sample level filtering
-source("globals.R")
+source("https://github.com/AAlhendi1707/GWAS/blob/master/R/globals.R?raw=true")
 
 # load data created in previous snippets
 load(working.data.fname(2))
